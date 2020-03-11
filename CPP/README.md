@@ -1083,13 +1083,15 @@ sizeof  x;
 |ws|提取空白符|
 |endl|插入换行符，并刷新流|
 |ends|插入空字符|
-|setsprecision(int)|设置浮点数的小数位数（包括小数点）|
+|setprecision(int)|设置浮点数的小数位数（包括小数点）|
 |setw(int)|设置域宽|
 
 - 例：
 
-    ```
+    ```cpp
     cout << setw(5) << setprecision(3) << 3.1415;
+    // 保留3位小数输出，setiosflags(ios::fixed)需要包含头文件<iomainp>
+    cout << setiosflags(ios::fixed) << setprecision(3) << 3.1415
     ```
 
 ## 参考资料
