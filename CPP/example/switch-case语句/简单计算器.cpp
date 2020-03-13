@@ -24,13 +24,13 @@ int main()
         case '/':
             if (num2 == 0)
             {
-                cerr << "Divided by zero!";
+                cout << "Divided by zero!";
                 break;
             }
             cout << num1 / num2;
             break;
 
         default:
-            cout << "Invalid operrator!";
+            cout << "Invalid operator!";
     }
 }
