@@ -1247,5 +1247,221 @@ int main()
 }
 ```
 
+### while语句
+
+#### 语法形式
+
+```cpp
+while  (表达式)  语句
+```
+
+- 语句可以是复合语句，但其中要包含改变表达式值的语句，不然会成为死循环
+
+
+#### 执行顺序
+
+先判断表达式的值，若为 true 时，执行语句。
+
+```cpp
+// 例2-5 求自然数1～10之和
+#include <iostream>
+using namespace std;
+
+int main() {
+  int i = 1, sum = 0;
+
+  while (i <= 10) {
+      sum += i;  
+      i++;
+  }
+
+  cout << "sum = " << sum << endl;
+  return 0;
+
+}
+```
+
+### do-while语句
+
+#### 语法形式
+
+```cpp
+do 语句
+while(表达式)
+```
+
+- 语句可以是复合语句，但其中要包含改变表达式值的语句，不然会成为死循环
+
+```cpp
+例2-6：输入一个数，将各位数字翻转后输出
+#include <iostream>
+using namespace std;
+
+int main() {
+      int n, right_digit, newnum = 0;
+
+      cout << "Enter the number: ";
+      cin >> n;
+
+      cout << "The number in reverse order is  ";
+
+      do {
+           right_digit = n % 10;
+
+           cout << right_digit;
+
+           n /= 10;
+      } while (n != 0);
+
+    cout << endl;
+
+      return 0;
+}
+```
+ 
+```cpp
+// 例2-7用do-while语句编程，求自然数1~10之和
+#include <iostream>
+using namespace std;
+
+int main() {
+
+      int i = 1, sum = 0;
+
+      do {
+           sum += i;
+           i++;
+      } while (i <= 10);
+
+      cout << "sum = " << sum << endl;
+
+      return 0;
+}
+
+// 对比下面的程序
+
+// 程序1：
+#include <iostream>
+using namespace std;
+
+int main() {
+  int i, sum = 0;
+  cin >> i;
+
+  while (i <= 10) {
+    sum += i;
+    i++;
+  }
+
+  cout << "sum= " << sum
+       << endl;
+
+  return 0;
+}
+
+// 程序2：
+#include <iostream>
+using namespace std;
+
+int main() {
+  int i, sum = 0;
+  cin >> i;
+
+  do {
+    sum += i;
+    i++;
+  } while (i <= 10)；
+
+  cout << "sum=" << sum
+       << endl;
+
+  return 0;
+}
+```
+
+### for语句
+
+#### 语法形式
+
+![for语法形式](http://sc0.ykt.io/ue_i/20191116/1195548767034675200.png)
+
+
+- 另一种形式：范围for语句：
+
+![范围for语句](http://sc0.ykt.io/ue_i/20200303/1234815674275205120.png)
+
+```cpp
+// 例2-8：输入一个整数，求出它的所有因子
+#include <iostream>
+using namespace std;
+
+int main() {
+      int n;
+
+      cout << "Enter a positive integer: ";
+      cin >> n;
+
+      cout << "Number  " << n << "   Factors  ";
+
+      for (int k = 1; k <= n; k++)
+        if (n % k == 0)
+          cout << k << "  ";
+      
+      cout << endl;
+
+  return 0;
+}
+
+```text
+运行结果1：
+
+Enter a positive integer: 36
+
+Number  36  Factors  1  2  3  4  6  9  12  18  36 
+```
+```text
+运行结果2：
+
+Enter a positive integer: 7
+
+Number  7   Factors  1  7  
+
+```
+
+### 嵌套的控制结构、其他控制语句
+
+```cpp
+// 例2-10 输入一系列整数，统计出正整数个数i和负整数个数j,读入0则结束。
+#include <iostream>
+using namespace std;
+
+int main() {
+      int i = 0, j = 0, n;
+
+      cout <<"Enter some integers please (enter 0 to quit):" << endl;
+      cin >> n;
+
+      while (n != 0) {
+        if (n > 0) i += 1;
+        if (n < 0) j += 1;
+
+        cin >> n;
+      }
+
+      cout << "Count of positive integers: " << i << endl;
+      cout << "Count of negative integers: " << j << endl;
+
+      return 0;
+
+}
+```
+
+![其他控制语句](http://sc0.ykt.io/ue_i/20200303/1234816144041447424.png)
+
+<!-- 需要手打 -->
+![自定义类型1](http://sc0.ykt.io/ue_i/20200303/1234820564472958976.png)
+![自定义类型2](http://sc0.ykt.io/ue_i/20200303/1234820589403901952.png)
+![自定义类型3](http://sc0.ykt.io/ue_i/20200303/1234820617652539392.png)
+
 ## 参考资料
 > [清华大学公开课——C++语言程序设计基础](https://next.xuetangx.com/course/THU08091000247/1515741)
