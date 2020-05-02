@@ -1,23 +1,33 @@
 {
-    "configurations": [
-        {
-            "name": "Win32",
-            "includePath": [
-                "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\include\\*",
-                "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\x86_64-w64-mingw32\\include\\*",
-                "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\lib\\gcc\\x86_64-w64-mingw32\\4.9.2\\include\\*",
-                "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\lib\\gcc\\x86_64-w64-mingw32\\4.9.2\\include\\c++\\*"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\include\\*",
+        "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\x86_64-w64-mingw32\\include\\*",
+        "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\lib\\gcc\\x86_64-w64-mingw32\\4.9.2\\include\\*",
+        "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\lib\\gcc\\x86_64-w64-mingw32\\4.9.2\\include\\c++\\*"
+      ],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "compilerPath": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "clang-x64",
+      "compilerArgs": ["-std=c++11", "-O2"]
+    },
+    {
+      "name": "Mac",
+      "includePath": [],
+      "defines": [],
+      "macFrameworkPath": [
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"
+      ],
+      "compilerPath": "/usr/bin/g++",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "clang-x64",
+      "compilerArgs": ["-std=c++11", "-O2"]
+    }
+  ],
+  "version": 4
 }
